@@ -46,6 +46,22 @@ export const NavigationItems: NavigationItem[] = [
         icon: 'feather icon-file-text',
         classes: 'nav-item'
       },
+      {
+        id: 'citas',
+        title: 'Gestión de Citas',
+        type: 'item',
+        url: '/inicio/citas',
+        icon: 'feather icon-calendar',
+        classes: 'nav-item'
+      },
+      {
+        id: 'historias-clinicas',
+        title: 'Historias Clínicas',
+        type: 'item',
+        url: '/inicio/historias-clinicas',
+        icon: 'feather icon-clipboard',
+        classes: 'nav-item'
+      },
     ]
   },  
 ];

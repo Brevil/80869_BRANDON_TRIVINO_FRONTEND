@@ -1,4 +1,5 @@
 export class Cliente {
+   id?: number;
    tipoDocumento?: string;
    numeroDocumento?: string;
    nombres?: string;

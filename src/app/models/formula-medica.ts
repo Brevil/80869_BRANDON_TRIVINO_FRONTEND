@@ -1,18 +1,40 @@
-export class FormulaMedica {
+import { Cita } from './cita';
+import { Mascota } from './mascota';
+import { Veterinario } from './medico';
+
+/** Medicamento disponible para prescribir. */
+export interface Medicamento {
   id?: number;
-  cita?: {
-    id?: number;
-    fechaHora?: Date;
-    estado?: string;
-    motivo?: string;
-    mascota?: { nombreMascota?: string };
-  };
-  medicamento?: { id?: number; nombre?: string; presentacion?: string };
+  nombre?: string;
+  presentacion?: string;
+}
+
+/** Fórmula médica tal como la devuelve el backend. */
+export interface FormulaMedica {
+  id?: number;
+  cita?: Cita;
+  mascota?: Mascota;
+  medico?: Veterinario;
+  medicamento?: Medicamento;
+  fechaEmision?: string;
   dosis?: string;
+  frecuencia?: string;
+  duracionDias?: number;
   indicaciones?: string;
-  fechaCreacionRegistro?: Date;
-  fechaActualizacionRegistro?: Date;
-  // Solo para enviar al backend al crear o editar.
-  citaId?: number;
-  medicamentoId?: number;
+  fechaCreacionRegistro?: string;
+  fechaActualizacionRegistro?: string;
+}
+
+/** Datos que se envían al backend para crear o editar una fórmula. */
+export interface FormulaMedicaRq {
+  id?: number;
+  citaId: number;
+  mascotaId: number;
+  medicoId: number;
+  medicamentoId: number;
+  fechaEmision: string;
+  dosis: string;
+  frecuencia: string;
+  duracionDias: number;
+  indicaciones?: string;
 }

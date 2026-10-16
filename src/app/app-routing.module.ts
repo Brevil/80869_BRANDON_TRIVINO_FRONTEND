@@ -4,6 +4,8 @@ import { AdminComponent } from './theme/layout/admin/admin.component';
 import { UsuarioComponent } from './demo/pages/usuario/usuario.component';
 import { MascotaComponent } from './demo/pages/mascota/mascota.component';
 import { FormulaMedicaComponent } from './demo/pages/formula-medica/formula-medica.component';
+import { CitaComponent } from './demo/pages/cita/cita.component';
+import { HistoriaMedicaComponent } from './demo/pages/historia-medica/historia-medica.component';
 
 
 export const routes: Routes = [
@@ -19,7 +21,9 @@ export const routes: Routes = [
     children: [      
       { path: 'usuarios', component: UsuarioComponent, data: { title: 'Usuarios' }},
       { path: 'mascotas', component: MascotaComponent, data: { title: 'Mascotas' }},
-      { path: 'formulas-medicas', component: FormulaMedicaComponent, data: { title: 'Fórmulas Médicas' }}
+      { path: 'formulas-medicas', component: FormulaMedicaComponent, data: { title: 'Fórmulas Médicas' }},
+      { path: 'citas', component: CitaComponent, data: { title: 'Citas Médicas' }},
+      { path: 'historias-clinicas', component: HistoriaMedicaComponent, data: { title: 'Historias Clínicas' }}
       /* Inserte nuevos menus aqui */    
     ]
   },
